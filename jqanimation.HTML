@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <script>
+            $(function(){
+            $("#box").mouseover(function(){
+                $ ('#box').animate({
+                    hieght:'120px',
+                    width:'120px'
+                    });
+            });
+            $("#box").mouseleave(function(){
+                $ ('#box').animate({
+                    hieght:'-=10px',
+                    width:'-=10px'
+                    });
+            });
+            $('#box').on("mousedown",function(){
+                $('#box').css("background-color","red");
+            });
+             $('#box').on("mouseup",function(){
+                 $('#box').css("background-color","orange");
+             });
+        });
+        </script>
+    </head>
+    <style>
+            .box_style {
+               height: 100px;
+               width: 100px;
+               background-color: orange;           }
+       </style>
+
+    <body>
+        <div id="box" class="box_style">
+    </body>
+</html>
